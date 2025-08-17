@@ -4,6 +4,7 @@
 // Compile: gcc linkedlist.c -o linkedlist
 // Run: ./linkedlist
 
+// Libraries
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -52,8 +53,8 @@ int main(void)
         }
     }
 
-
     int choice;
+    
     do
     {
         printf("Choose from the following operations: \n");
@@ -132,11 +133,10 @@ int main(void)
             choice = 0;
             break;
 
-            default:
+            default: 
             printf("Invalid choice, try again. \n");
         }
     } while (choice != 0);
-
 
     free_list(&head, &tail);
     return 0;
@@ -197,6 +197,7 @@ void delete_node(node **head, node **tail, int value)
     printf("Value %d not found!\n", value);
 }
 
+// searching throught the list
 void search_list(node *head, int value)
 {
     for (node *current = head; current != NULL; current = current->next)
@@ -225,7 +226,7 @@ void print_list(node *head)
     printf("NULL\n");
 }
 
-// frees all nodes
+// frees all nodes, setting head and tail to NULL
 void free_list(node **head, node **tail)
 {
     for (node *current = *head, *tmp = NULL; current != NULL; current = tmp)
