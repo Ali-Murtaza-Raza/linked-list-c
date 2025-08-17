@@ -1,7 +1,6 @@
 # Linked List in C
 
 [![Language](https://img.shields.io/badge/language-C-blue)](https://www.cprogramming.com/)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 This is a simple implementation of a **singly linked list** in C.  
 The program allows the user to insert integers into a linked list until they enter **0**, at which point the list is printed and all allocated memory is freed.
